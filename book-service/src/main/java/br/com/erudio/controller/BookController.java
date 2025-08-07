@@ -13,7 +13,9 @@ import br.com.erudio.environment.InstanceInformationService;
 import br.com.erudio.model.Book;
 import br.com.erudio.proxy.ExchangeProxy;
 import br.com.erudio.repository.BookRepository;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
+@Tag(name = "Foo Bar Endpoint")
 @RestController
 @RequestMapping("book-service")
 public class BookController {

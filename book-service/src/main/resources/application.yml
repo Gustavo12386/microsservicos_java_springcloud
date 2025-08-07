@@ -8,7 +8,10 @@ eureka:
 
 resilience4j:
   ratelimiter:
-    limit-refresh-period: 10s
+    instances:
+      default:
+        limit-for-period: 2
+        limit-refresh-period: 10s
   bulkhead:
     instances:
       default:
@@ -37,3 +40,7 @@ spring:
       hibernate:
         show-sql: false
     open-in-view: false
+management:
+ tracing:
+    sampling:
+      probability: 1.0	
